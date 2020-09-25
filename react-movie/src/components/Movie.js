@@ -16,7 +16,7 @@ const Movie = ({movieId}) => {
     const [movie,loading,error] = useMovieFetch(movieId);
     console.log(movie);
     if(error) return <div>Something went wrong ....</div>;
-    if(loading || !movie.original_title) return <Spinner />;
+    if(loading) return <Spinner />;
 
     return(
 <div>
